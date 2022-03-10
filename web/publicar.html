@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.png">
+
+    <title>Publicar Cómic - Panel de Administración | Comics Cloud</title>
+
+    <link rel="canonical" href="publicar.html">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-md-7 py-4">
+                <h4 class="text-white">¿Qué es Comics Cloud?</h4>
+                <p class="text-muted">Comics Cloud es una plataforma web abierta y colaborativa, totalmente gratuita, que pretende poner en contacto a múltiples lectores para intercambiar información acerca del mundo de los comics.</p>
+                <p class="text-white text-small">Lunes - Sábado de 11:00 a 13:30 y de 17:00 a 19:30</p>
+                <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Título" aria-label="Título">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+              </form>
+              </div>
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h4 class="text-white">Menú</h4>
+                <ul class="list-unstyled">
+                  <li><a href="index.html" class="text-white">Inicio</a></li>
+                  <li><a href="homepage.html" class="text-white">Panel de Lector</a></li>
+                  <li><a href="#" class="text-white active">Panel de Administración</a></li>
+                  <li><a href="#" class="text-white">Mi cuenta</a></li>
+                  <li><a href="index.html" class="text-white">Salir</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+          <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+              <img src="images/logo.svg">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar-sticky">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="admin.html">
+                  <span data-feather="home"></span>
+                  Vista general <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin.html#comics">
+                  <span data-feather="file"></span>
+                  Cómics
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin.html#lectores">
+                  <span data-feather="users"></span>
+                  Lectores
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin.html#ventas">
+                  <span data-feather="shopping-cart"></span>
+                  Ventas
+                </a>
+              </li>
+            </ul>
+
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Gestionar Contenido</span>
+              <a class="d-flex align-items-center text-muted" href="#">
+              </a>
+            </h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <span data-feather="file-text"></span>
+                  Publicar
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Bienvenido, <stron>administrador.</stron></h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group mr-2">
+                <button class="btn btn-sm btn-secondary">Publicar Cómic</button>
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <form class="form-publish">
+              <div class="form-group">
+                <label for="portada">Portada y Datos Básicos:</label>
+                <input type="file" id="portada" class="form-control" placeholder="portada" required>
+                <input type="text" id="titulo" class="form-control" placeholder="Título" required autofocus>
+                <input type="text" id="editorial" class="form-control form-control-sm" placeholder="Editorial" required>
+                <input type="number" id="referencia" class="form-control" placeholder="Nº Ref. o ISBN" required autofocus>
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="number" id="ancho" class="form-control" placeholder="Ancho" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" id="largo" class="form-control" placeholder="Largo" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="number" id="peso" class="form-control" placeholder="Peso" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" id="paginas" class="form-control" placeholder="Paginas" required>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="form-group">
+                <label for="publicacion">Fecha de Publicación y Año de Edición:</label>
+                <input type="date" id="publicacion" class="form-control form-control-sm" placeholder="Fecha de Publicación" required>
+                <input type="number" min="1900" max="2099" value="2016" step="1" id="edicion" class="form-control form-control-sm" placeholder="Año de Edición" required>
+                <select id="idiomas" class="form-control form-control-sm" multiple required>
+                  <option>Español</option>
+                  <option>Inglés</option>
+                  <option>Catalán</option>
+                  <option>Alemán</option>
+                  <option>Francés</option>
+                  <option>Italiano</option>
+                </select>
+              </div>
+              <hr>
+              <div class="form-group">
+                <div class="rating">
+                  <input type="radio" name="any_name" value="5" id="sel-rating-5" checked><label for="sel-rating-5">5</label>
+                  <input type="radio" name="any_name" value="4" id="sel-rating-4"><label for="sel-rating-4">4</label>
+                  <input type="radio" name="any_name" value="3" id="sel-rating-3"><label for="sel-rating-3">3</label>
+                  <input type="radio" name="any_name" value="2" id="sel-rating-2"><label for="sel-rating-2">2</label>
+                  <input type="radio" name="any_name" value="1" id="sel-rating-1"><label for="sel-rating-1">1</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Descripción sobre el Asunto del Cómic:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <hr>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="number" id="referencia" class="form-control" placeholder="Precio" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" id="referencia" class="form-control" placeholder="Con rebaja" required>
+                  </div>
+                </div>
+              </div>
+              
+              <input type="reset" data-toggle="modal" data-target="#publicado" value="Publicar" class="btn btn-lg btn-success btn-block">
+              <div class="modal fade" id="publicado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Publicado Correctamente</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>window.jQuery || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"><\/script>')</script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+  </body>
+</html>
